@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include corecentric *.css
+recursive-include corecentric *.csv
+recursive-include corecentric *.html
+recursive-include corecentric *.ico
+recursive-include corecentric *.js
+recursive-include corecentric *.json
+recursive-include corecentric *.md
+recursive-include corecentric *.png
+recursive-include corecentric *.py
+recursive-include corecentric *.svg
+recursive-include corecentric *.txt
+recursive-exclude corecentric *.pyc
