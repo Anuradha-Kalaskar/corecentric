@@ -32,6 +32,9 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Project" : "custom_app/custom_script/project/project.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -89,13 +92,16 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-# }
+    "Project": {
+		"validate": "corecentric.corecentric.custom_script.project.project.validate"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -172,4 +178,7 @@ user_data_fields = [
 # auth_hooks = [
 # 	"corecentric.auth.validate"
 # ]
-
+# Fixtures
+fixtures = [
+	'Custom Field', 'Property Setter'
+]
