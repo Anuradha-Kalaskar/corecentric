@@ -7,7 +7,8 @@ import time
 from frappe.model.mapper import get_mapped_doc
 
 def validate(doc, method=None):
-	make_project_warehouse(doc)
+	if doc.is_new():
+		make_project_warehouse(doc)
 
 @frappe.whitelist()
 def make_project_warehouse(doc):
